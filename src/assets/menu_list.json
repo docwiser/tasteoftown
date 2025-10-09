@@ -1,0 +1,1017 @@
+{
+    "Starters": [
+        {
+            "name": "Veg Kothe",
+            "price": "Rs. 199",
+            "description": "Pan-fried vegetable dumplings, a savory delight."
+        },
+        {
+            "name": "Veg Crispy",
+            "price": "Rs. 198",
+            "description": "Batter-fried assorted vegetables tossed in a tangy sauce."
+        },
+        {
+            "name": "Honey Chilli Potato",
+            "price": "Rs. 159",
+            "description": "Crispy fried potato fingers glazed with a sweet and spicy honey-chilli sauce."
+        },
+        {
+            "name": "Hara Bhara Kabab",
+            "price": "Rs. 149",
+            "description": "Pan-fried patties made with spinach, peas, and potatoes."
+        },
+        {
+            "name": "Pav Bhaji",
+            "price": "Rs. 149",
+            "description": "A flavorful mash of mixed vegetables served with soft, buttered pav buns."
+        },
+        {
+            "name": "Extra Pav",
+            "price": "Rs. 39",
+            "description": "A pair of soft, buttered pav buns."
+        },
+        {
+            "name": "Vada Pav",
+            "price": "Rs. 100",
+            "description": "A popular Mumbai street food featuring a spiced potato fritter in a pav bun."
+        },
+        {
+            "name": "Chhole Bhature",
+            "price": "Rs. 139",
+            "description": "Spicy chickpea curry served with fluffy, deep-fried bread."
+        },
+        {
+            "name": "Veg Pakoda",
+            "price": "Rs. 119",
+            "description": "Assorted vegetables dipped in gram flour batter and deep-fried."
+        },
+        {
+            "name": "Paneer Pakoda",
+            "price": "Rs. 169",
+            "description": "Cottage cheese slices coated in spiced gram flour batter and fried until golden."
+        },
+        {
+            "name": "Chhole Kulche",
+            "price": "Rs. 169",
+            "description": "Chickpea curry served with soft, leavened flatbread."
+        },
+        {
+            "name": "Paneer Malai Tikka",
+            "price": "Rs. 239",
+            "description": "Creamy cottage cheese cubes, mildly spiced & charcoal grilled to perfection."
+        },
+        {
+            "name": "Paneer Achari Tikka",
+            "price": "Rs. 229",
+            "description": "Paneer cubes marinated in a tangy pickle-spiced yogurt and grilled."
+        },
+        {
+            "name": "Masala Paneer Tikka",
+            "price": "Rs. 249",
+            "description": "Spicy marinated paneer cubes skewered and grilled in a tandoor."
+        },
+        {
+            "name": "Veg Sizzler",
+            "price": "Rs. 200",
+            "description": "A sizzling platter of assorted grilled vegetables, patty, and fries with sauce."
+        },
+        {
+            "name": "Paneer Sizzler",
+            "price": "Rs. 239",
+            "description": "A sizzling platter of grilled paneer steaks, vegetables, and fries with sauce."
+        }
+    ],
+    "Soups": [
+        {
+            "name": "Hot & Sour Soup",
+            "price": "Rs. 89",
+            "description": "A spicy and tangy soup with mushrooms and vegetables."
+        },
+        {
+            "name": "Tomato Soup",
+            "price": "Rs. 81",
+            "description": "A classic, creamy soup made from fresh, tangy tomatoes."
+        },
+        {
+            "name": "Lemon Coriander Soup",
+            "price": "Rs. 90",
+            "description": "A light and refreshing soup with the zesty flavor of lemon and fresh coriander."
+        },
+        {
+            "name": "Ginger Garlic Soup",
+            "price": "Rs. 89",
+            "description": "A clear, aromatic soup with a strong flavor of ginger and garlic."
+        }
+    ],
+    "Chinese & Noodles": [
+        {
+            "name": "Veg Noodles",
+            "price": "Rs. 139",
+            "description": "Classic stir-fried noodles with a mix of fresh vegetables."
+        },
+        {
+            "name": "Veg Hakka Noodles",
+            "price": "Rs. 149",
+            "description": "Indo-Chinese style stir-fried noodles with julienned vegetables."
+        },
+        {
+            "name": "Singapuri Noodles",
+            "price": "Rs. 154",
+            "description": "Curry-flavored stir-fried noodles with mixed vegetables."
+        },
+        {
+            "name": "Paneer Noodles",
+            "price": "Rs. 199",
+            "description": "Stir-fried noodles with soft paneer cubes and vegetables."
+        },
+        {
+            "name": "Manchurian Noodles",
+            "price": "Rs. 161",
+            "description": "A flavorful combination of noodles and vegetable Manchurian balls."
+        },
+        {
+            "name": "All Mix Noodles",
+            "price": "Rs. 150",
+            "description": "A delicious mix of various noodles and assorted vegetables."
+        },
+        {
+            "name": "Schezwan Noodles",
+            "price": "Rs. 149",
+            "description": "Spicy stir-fried noodles tossed in a bold Schezwan sauce with vegetables."
+        },
+        {
+            "name": "Veg Fried Rice",
+            "price": "Rs. 159",
+            "description": "Stir-fried rice with a medley of finely chopped vegetables."
+        },
+        {
+            "name": "Manchurian Rice",
+            "price": "Rs. 159",
+            "description": "Fried rice served with a savory and tangy Manchurian gravy."
+        },
+        {
+            "name": "Schezwan Rice",
+            "price": "Rs. 129",
+            "description": "Spicy fried rice tossed in Schezwan sauce with vegetables."
+        },
+        {
+            "name": "Paneer Rice",
+            "price": "Rs. 159",
+            "description": "Fried rice with cubes of paneer and mixed vegetables."
+        },
+        {
+            "name": "All Mix Fried Rice",
+            "price": "Rs. 150",
+            "description": "A hearty portion of fried rice with a generous mix of all vegetables."
+        },
+        {
+            "name": "Veg Manchurian",
+            "price": "Rs. 209",
+            "description": "Crispy vegetable balls tossed in a savory and tangy Manchurian sauce."
+        },
+        {
+            "name": "Paneer Manchurian",
+            "price": "Rs. 209",
+            "description": "Fried paneer cubes tossed in a classic Manchurian sauce."
+        },
+        {
+            "name": "Schezwan Manchurian",
+            "price": "Rs. 200",
+            "description": "Vegetable balls in a spicy and pungent Schezwan gravy."
+        },
+        {
+            "name": "Ginger Garlic Manchurian",
+            "price": "Rs. 199",
+            "description": "Aromatic Manchurian dish with prominent flavors of ginger and garlic."
+        },
+        {
+            "name": "Chilli Paneer",
+            "price": "Rs. 219",
+            "description": "Spicy and tangy paneer cubes tossed with onions and bell peppers."
+        },
+        {
+            "name": "Garlic Chilli Paneer",
+            "price": "Rs. 229",
+            "description": "A flavor-packed version of chilli paneer with an extra hint of garlic."
+        }
+    ],
+    "Momos": [],
+    "Rolls": [
+        {
+            "name": "Veg Spring Roll",
+            "price": "Rs. 150",
+            "description": "Crispy fried rolls stuffed with a savory mix of noodles and vegetables."
+        },
+        {
+            "name": "Paneer Spring Roll",
+            "price": "Rs. 179",
+            "description": "Crispy fried rolls stuffed with a spicy paneer and vegetable filling."
+        },
+        {
+            "name": "Kaathi Roll",
+            "price": "Rs. 159",
+            "description": "A flavorful wrap with a mixed vegetable filling rolled in a paratha."
+        },
+        {
+            "name": "Butter Paneer Masala Roll (Gravy)",
+            "price": "Rs. 209",
+            "description": "A rich and creamy paneer butter masala gravy wrapped in a soft flatbread."
+        }
+    ],
+    "Burgers & Sandwiches": [
+        {
+            "name": "Plain Burger",
+            "price": "Rs. 50",
+            "description": "A simple burger with a vegetable patty and classic sauces."
+        },
+        {
+            "name": "Veg Burger",
+            "price": "Rs. 89",
+            "description": "A classic burger with a crispy vegetable patty, lettuce, and tomato."
+        },
+        {
+            "name": "Double Cheese Burger",
+            "price": "Rs. 99",
+            "description": "A juicy veg burger with an extra slice of cheese for a melt-in-your-mouth experience."
+        },
+        {
+            "name": "Paneer Burger",
+            "price": "Rs. 109",
+            "description": "A delicious burger featuring a crispy paneer patty and tangy sauces."
+        },
+        {
+            "name": "Cheese Burst Burger",
+            "price": "Rs. 120",
+            "description": "An indulgent burger with a cheese-filled patty that oozes with every bite."
+        },
+        {
+            "name": "Corn Cheese Burger",
+            "price": "Rs. 100",
+            "description": "A delightful burger with a patty made of corn and loaded with cheese."
+        },
+        {
+            "name": "Lambu Burger",
+            "price": "Rs. 200",
+            "description": "An extra-large burger with double patties and all the fixings."
+        },
+        {
+            "name": "Veg Sandwich",
+            "price": "Rs. 89",
+            "description": "A simple and fresh sandwich with sliced cucumbers, tomatoes, and onions."
+        },
+        {
+            "name": "Mayo Sandwich",
+            "price": "Rs. 89",
+            "description": "A creamy sandwich with a mix of vegetables and mayonnaise."
+        },
+        {
+            "name": "Potato Sandwich",
+            "price": "Rs. 79",
+            "description": "A comforting sandwich with a spiced mashed potato filling."
+        },
+        {
+            "name": "Green Chutney Sandwich",
+            "price": "Rs. 88",
+            "description": "A zesty sandwich layered with fresh mint-coriander chutney and vegetables."
+        },
+        {
+            "name": "Paneer Cheese Sandwich",
+            "price": "Rs. 109",
+            "description": "A grilled sandwich stuffed with spiced paneer and melted cheese."
+        },
+        {
+            "name": "Melti Veg Cheese Sandwich",
+            "price": "Rs. 130",
+            "description": "A triple-layered sandwich with fresh veggies and oozing melted cheese."
+        },
+        {
+            "name": "Pizza Style Sandwich",
+            "price": "\u20b9150",
+            "description": "A fusion delight combining the crispness of bread with cheesy pizza toppings, loaded with vegetables, herbs, and melted mozzarella."
+        }
+    ],
+    "Pizzas": [
+        {
+            "name": "Farmhouse Pizza",
+            "price": "Rs. 199",
+            "description": "A classic pizza topped with onions, capsicum, tomatoes, and mushrooms."
+        },
+        {
+            "name": "Cheese Corn Pizza",
+            "price": "Rs. 180",
+            "description": "A delightful pizza with a topping of sweet corn and extra cheese."
+        },
+        {
+            "name": "Sauteed Paneer Pizza",
+            "price": "Rs. 201",
+            "description": "A delicious pizza topped with sauteed paneer, onions, and bell peppers."
+        },
+        {
+            "name": "Onion Tomato Pizza",
+            "price": "Rs. 150",
+            "description": "A simple yet flavorful pizza with a classic topping of onion and tomato."
+        },
+        {
+            "name": "Capsicum Pizza",
+            "price": "Rs. 180",
+            "description": "A crispy crust pizza topped with crunchy capsicum and cheese."
+        },
+        {
+            "name": "Double Cheese Pizza",
+            "price": "Rs. 209",
+            "description": "For the cheese lovers! A pizza loaded with an extra layer of mozzarella."
+        },
+        {
+            "name": "Mushroom Pizza",
+            "price": "Rs. 208",
+            "description": "A savory pizza topped with sliced mushrooms and mozzarella cheese."
+        },
+        {
+            "name": "Baby Corn Pizza",
+            "price": "Rs. 189",
+            "description": "A tasty pizza with tender baby corn and a cheesy topping."
+        }
+    ],
+    "Pasta": [
+        {
+            "name": "White Sauce Pasta",
+            "price": "Rs. 199",
+            "description": "Pasta cooked in a rich and creamy cheese and white sauce with vegetables."
+        },
+        {
+            "name": "Red Sauce Pasta",
+            "price": "Rs. 195",
+            "description": "Pasta tossed in a tangy and savory tomato-based red sauce with vegetables."
+        },
+        {
+            "name": "Mix Pasta",
+            "price": "Rs. 201",
+            "description": "A perfect blend of white and red sauce pasta with assorted vegetables."
+        }
+    ],
+    "South Indian": [
+        {
+            "name": "Plain Dosa",
+            "price": "Rs. 80",
+            "description": "A thin, crispy crepe made from fermented rice and lentil batter."
+        },
+        {
+            "name": "Masala Dosa",
+            "price": "Rs. 95",
+            "description": "A crispy dosa stuffed with a savory spiced potato filling."
+        },
+        {
+            "name": "Paneer Masala Dosa",
+            "price": "Rs. 110",
+            "description": "A dosa with a delicious filling of spiced paneer and potatoes."
+        },
+        {
+            "name": "Paper Dosa",
+            "price": "Rs. 119",
+            "description": "An extra-large, paper-thin, and crispy version of the plain dosa."
+        },
+        {
+            "name": "Spicy Masala Dosa",
+            "price": "Rs. 99",
+            "description": "A masala dosa with an extra kick of spices for a fiery taste."
+        },
+        {
+            "name": "Chinese Dosa",
+            "price": "Rs. 139",
+            "description": "An fusion dosa stuffed with stir-fried noodles and vegetables."
+        },
+        {
+            "name": "Idli Sambhar",
+            "price": "Rs. 99",
+            "description": "Steamed rice and lentil cakes served with a flavorful lentil-based vegetable stew."
+        },
+        {
+            "name": "Fry Idli Sambhar",
+            "price": "Rs. 109",
+            "description": "Crispy fried idli cubes tossed in spices, served with sambhar."
+        },
+        {
+            "name": "Veg Uttapam",
+            "price": "Rs. 79",
+            "description": "A thick, savory pancake with a topping of mixed vegetables."
+        },
+        {
+            "name": "Tomato Uttapam",
+            "price": "Rs. 81",
+            "description": "A savory pancake topped with finely chopped tomatoes."
+        },
+        {
+            "name": "Paneer Uttapam",
+            "price": "Rs. 119",
+            "description": "A thick pancake topped with grated paneer and herbs."
+        },
+        {
+            "name": "Cheese Paneer Uttapam",
+            "price": "Rs. 129",
+            "description": "An indulgent uttapam with a generous topping of cheese and paneer."
+        }
+    ],
+    "Main Course (Indian Gravy)": [
+        {
+            "name": "Matar Paneer",
+            "price": "Rs. 209",
+            "description": "Cottage cheese and green peas in a savory tomato-based gravy."
+        },
+        {
+            "name": "Matar Paneer (Half)",
+            "price": "Rs. 119",
+            "description": "A smaller portion of our classic Matar Paneer."
+        },
+        {
+            "name": "Palak Paneer",
+            "price": "Rs. 220",
+            "description": "Soft paneer cubes cooked in a smooth, creamy spinach gravy."
+        },
+        {
+            "name": "Palak Paneer (Half)",
+            "price": "Rs. 119",
+            "description": "A smaller portion of our wholesome Palak Paneer."
+        },
+        {
+            "name": "Paneer Masala",
+            "price": "Rs. 219",
+            "description": "Paneer cooked in a spicy and flavorful onion-tomato masala gravy."
+        },
+        {
+            "name": "Paneer Masala (Half)",
+            "price": "Rs. 118",
+            "description": "A smaller portion of our spicy Paneer Masala."
+        },
+        {
+            "name": "Kadai Paneer",
+            "price": "Rs. 221",
+            "description": "Paneer cooked with bell peppers and onions in a spicy, freshly ground masala."
+        },
+        {
+            "name": "Kadai Paneer (Half)",
+            "price": "Rs. 119",
+            "description": "A smaller portion of our flavorful Kadai Paneer."
+        },
+        {
+            "name": "Punjabi Paneer",
+            "price": "Rs. 235",
+            "description": "A rich and robust paneer dish with authentic Punjabi spices."
+        },
+        {
+            "name": "Punjabi Paneer (Half)",
+            "price": "Rs. 135",
+            "description": "A smaller portion of our rich Punjabi Paneer."
+        },
+        {
+            "name": "Paneer Do Pyaza",
+            "price": "Rs. 214",
+            "description": "A delicious paneer curry with a generous amount of onions in two forms."
+        },
+        {
+            "name": "Kaju Paneer",
+            "price": "Rs. 240",
+            "description": "A rich and creamy curry with paneer and cashews in a tomato-based gravy."
+        },
+        {
+            "name": "Paneer Butter Masala",
+            "price": "Rs. 229",
+            "description": "Soft paneer cubes simmered in a rich, buttery, and creamy tomato gravy."
+        },
+        {
+            "name": "Paneer Butter Masala (Half)",
+            "price": "Rs. 129",
+            "description": "A smaller portion of our signature Paneer Butter Masala."
+        },
+        {
+            "name": "Shahi Paneer",
+            "price": "Rs. 219",
+            "description": "A royal dish with paneer in a thick, creamy gravy of cream, tomatoes, and spices."
+        },
+        {
+            "name": "Shahi Paneer (Half)",
+            "price": "Rs. 119",
+            "description": "A smaller portion of our royal Shahi Paneer."
+        },
+        {
+            "name": "Kaju Curry",
+            "price": "Rs. 229",
+            "description": "Rich and creamy curry made with roasted cashews in a sweet tomato gravy."
+        },
+        {
+            "name": "Kaju Curry (Half)",
+            "price": "Rs. 139",
+            "description": "A smaller portion of our creamy Kaju Curry."
+        },
+        {
+            "name": "Paneer Lababdar",
+            "price": "Rs. 228",
+            "description": "A luscious and creamy paneer dish with a tangy tomato and onion gravy."
+        },
+        {
+            "name": "Paneer Lababdar (Half)",
+            "price": "Rs. 138",
+            "description": "A smaller portion of our luscious Paneer Lababdar."
+        },
+        {
+            "name": "Handi (Matki Paneer)",
+            "price": "Rs. 229",
+            "description": "Paneer curry slow-cooked in a traditional earthen pot for authentic flavor."
+        },
+        {
+            "name": "Veg Kofta",
+            "price": "Rs. 179",
+            "description": "Fried vegetable balls in a rich and flavorful onion-tomato gravy."
+        },
+        {
+            "name": "Veg Kofta (Half)",
+            "price": "Rs. 90",
+            "description": "A smaller portion of our Veg Kofta curry."
+        },
+        {
+            "name": "Malai Kofta",
+            "price": "Rs. 228",
+            "description": "Paneer and vegetable dumplings served in a sweet, creamy, and mildly spiced gravy."
+        },
+        {
+            "name": "Shahi Kofta",
+            "price": "Rs. 230",
+            "description": "A royal kofta curry with rich ingredients, fit for a king."
+        },
+        {
+            "name": "Matar Mushroom",
+            "price": "Rs. 214",
+            "description": "A simple yet delicious curry of mushrooms and green peas."
+        },
+        {
+            "name": "Mushroom Curry",
+            "price": "Rs. 220",
+            "description": "Mushrooms cooked in a savory and lightly spiced gravy."
+        },
+        {
+            "name": "Mushroom Masala",
+            "price": "Rs. 221",
+            "description": "A spicy and tangy curry with mushrooms, onions, and tomatoes."
+        },
+        {
+            "name": "Sev Tamatar",
+            "price": "Rs. 169",
+            "description": "A popular Gujarati dish of spicy tomato curry topped with crispy sev."
+        },
+        {
+            "name": "Sev Tamatar (Half)",
+            "price": "Rs. 89",
+            "description": "A smaller portion of our tangy Sev Tamatar."
+        },
+        {
+            "name": "Mix Veg",
+            "price": "Rs. 169",
+            "description": "A medley of fresh vegetables cooked in a light and flavorful onion-tomato gravy."
+        },
+        {
+            "name": "Mix Veg (Half)",
+            "price": "Rs. 89",
+            "description": "A smaller portion of our healthy Mix Veg curry."
+        },
+        {
+            "name": "Gobi Masala",
+            "price": "Rs. 120",
+            "description": "Cauliflower florets cooked in a spicy and aromatic masala."
+        },
+        {
+            "name": "Chhola Masala",
+            "price": "Rs. 169",
+            "description": "A classic North Indian dish of chickpeas in a spicy onion-tomato gravy."
+        },
+        {
+            "name": "Chhola Masala (Half)",
+            "price": "Rs. 99",
+            "description": "A smaller portion of our hearty Chhola Masala."
+        },
+        {
+            "name": "Aloo Chhola",
+            "price": "Rs. 159",
+            "description": "A comforting curry of potatoes and chickpeas in a savory gravy."
+        },
+        {
+            "name": "Aloo Chhola (Half)",
+            "price": "Rs. 99",
+            "description": "A smaller portion of our Aloo Chhola curry."
+        },
+        {
+            "name": "Bhindi Masala",
+            "price": "Rs. 169",
+            "description": "Stir-fried okra cooked with onions, tomatoes, and spices."
+        },
+        {
+            "name": "Bhindi Masala (Half)",
+            "price": "Rs. 99",
+            "description": "A smaller portion of our delicious Bhindi Masala."
+        },
+        {
+            "name": "Aloo Matar Gobi",
+            "price": "Rs. 166",
+            "description": "A simple, home-style dry curry with potatoes, peas, and cauliflower."
+        },
+        {
+            "name": "Aloo Matar Gobi (Half)",
+            "price": "Rs. 99",
+            "description": "A smaller portion of our Aloo Matar Gobi."
+        },
+        {
+            "name": "Veg Do Pyaza",
+            "price": "Rs. 179",
+            "description": "Mixed vegetables cooked in a rich gravy with plenty of onions."
+        },
+        {
+            "name": "Dum Aloo Kashmiri",
+            "price": "Rs. 199",
+            "description": "Baby potatoes simmered in a rich and flavorful yogurt-based gravy."
+        },
+        {
+            "name": "Dum Aloo",
+            "price": "Rs. 179",
+            "description": "Potatoes cooked in a spicy onion-tomato gravy."
+        },
+        {
+            "name": "Aloo Jeera",
+            "price": "Rs. 159",
+            "description": "A simple and flavorful dish of potatoes spiced with cumin seeds."
+        },
+        {
+            "name": "Aloo Jeera (Half)",
+            "price": "Rs. 99",
+            "description": "A smaller portion of our Aloo Jeera."
+        },
+        {
+            "name": "Aloo Palak",
+            "price": "Rs. 159",
+            "description": "A healthy and delicious curry of potatoes and spinach."
+        },
+        {
+            "name": "Aloo Palak (Half)",
+            "price": "Rs. 99",
+            "description": "A smaller portion of our Aloo Palak."
+        },
+        {
+            "name": "Paneer Kolhapuri",
+            "price": "Rs. 209",
+            "description": "A spicy paneer curry from Maharashtra, packed with bold flavors."
+        }
+    ],
+    "Dal (Lentils)": [
+        {
+            "name": "Dal Jeera",
+            "price": "Rs. 99",
+            "description": "Simple yellow lentils tempered with cumin seeds."
+        },
+        {
+            "name": "Dal Jeera (Half)",
+            "price": "Rs. 59",
+            "description": "A smaller serving of our Dal Jeera."
+        },
+        {
+            "name": "Dal Fry",
+            "price": "Rs. 119",
+            "description": "Yellow lentils cooked to perfection and tempered with spices."
+        },
+        {
+            "name": "Dal Fry (Half)",
+            "price": "Rs. 69",
+            "description": "A smaller serving of our classic Dal Fry."
+        },
+        {
+            "name": "Dal Tadka",
+            "price": "Rs. 129",
+            "description": "Dal Fry with an extra tempering of garlic, cumin, and red chillies."
+        },
+        {
+            "name": "Dal Tadka (Half)",
+            "price": "Rs. 79",
+            "description": "A smaller serving of our flavorful Dal Tadka."
+        },
+        {
+            "name": "Dal Makhni",
+            "price": "Rs. 209",
+            "description": "Creamy and buttery black lentils slow-cooked to perfection."
+        },
+        {
+            "name": "Dal Butter Fry",
+            "price": "Rs. 119",
+            "description": "Yellow lentils fried with a generous amount of butter and spices."
+        },
+        {
+            "name": "Green Dal",
+            "price": "Rs. 100",
+            "description": "A nutritious curry made from whole green moong dal."
+        }
+    ],
+    "Rice & Biryani": [
+        {
+            "name": "Plain Rice",
+            "price": "Rs. 99",
+            "description": "Perfectly steamed, fluffy basmati rice."
+        },
+        {
+            "name": "Jeera Rice",
+            "price": "Rs. 109",
+            "description": "Basmati rice tossed with roasted cumin seeds."
+        },
+        {
+            "name": "Masala Rice",
+            "price": "Rs. 139",
+            "description": "Flavorful rice cooked with a blend of Indian spices and herbs."
+        },
+        {
+            "name": "Veg Pulao",
+            "price": "Rs. 148",
+            "description": "A fragrant one-pot rice dish with mixed vegetables and aromatic spices."
+        },
+        {
+            "name": "Paneer Pulao",
+            "price": "Rs. 159",
+            "description": "Aromatic rice cooked with soft paneer cubes and mild spices."
+        },
+        {
+            "name": "Veg Biryani",
+            "price": "Rs. 149",
+            "description": "Aromatic basmati rice cooked with mixed vegetables and exotic spices."
+        },
+        {
+            "name": "Paneer Biryani",
+            "price": "Rs. 165",
+            "description": "A fragrant and flavorful biryani with marinated paneer and basmati rice."
+        }
+    ],
+    "Breads": [
+        {
+            "name": "Tawa Roti",
+            "price": "Rs. 10",
+            "description": "A simple whole wheat flatbread cooked on a griddle."
+        },
+        {
+            "name": "Tawa Butter Roti",
+            "price": "Rs. 12",
+            "description": "Tawa roti generously brushed with butter."
+        },
+        {
+            "name": "Tandoori Roti",
+            "price": "Rs. 10",
+            "description": "Whole wheat bread baked in a traditional clay tandoor."
+        },
+        {
+            "name": "Tandoori Butter Roti",
+            "price": "Rs. 12",
+            "description": "Tandoori roti brushed with a layer of butter."
+        },
+        {
+            "name": "Plain Naan",
+            "price": "Rs. 30",
+            "description": "Soft, leavened flatbread freshly baked in a tandoor."
+        },
+        {
+            "name": "Butter Naan",
+            "price": "Rs. 40",
+            "description": "Soft, leavened flatbread baked in a tandoor and brushed with butter."
+        },
+        {
+            "name": "Laccha Paratha",
+            "price": "Rs. 49",
+            "description": "A multi-layered and flaky whole wheat bread cooked in a tandoor."
+        },
+        {
+            "name": "Missi Roti",
+            "price": "Rs. 20",
+            "description": "A savory and spiced flatbread made from gram flour and wheat flour."
+        },
+        {
+            "name": "Tawa Paratha",
+            "price": "Rs. 25",
+            "description": "A simple, layered whole wheat flatbread cooked on a griddle."
+        },
+        {
+            "name": "Aloo Paratha",
+            "price": "Rs. 50",
+            "description": "A popular flatbread stuffed with a delicious spiced potato mixture."
+        },
+        {
+            "name": "Gobi Paratha",
+            "price": "Rs. 50",
+            "description": "A whole wheat flatbread stuffed with a savory cauliflower filling."
+        },
+        {
+            "name": "Paneer Paratha",
+            "price": "Rs. 70",
+            "description": "A hearty flatbread stuffed with a spiced cottage cheese filling."
+        },
+        {
+            "name": "Pyaz Paratha",
+            "price": "Rs. 50",
+            "description": "A flavorful flatbread stuffed with a spiced onion filling."
+        },
+        {
+            "name": "Mix Paratha",
+            "price": "Rs. 60",
+            "description": "A wholesome flatbread stuffed with a mix of assorted vegetables."
+        }
+    ],
+    "Accompaniments": [
+        {
+            "name": "Dry Papad",
+            "price": "Rs. 15",
+            "description": "A thin, crisp, roasted disc-shaped snack."
+        },
+        {
+            "name": "Fry Papad",
+            "price": "Rs. 20",
+            "description": "A thin, crisp, deep-fried disc-shaped snack."
+        },
+        {
+            "name": "Masala Papad",
+            "price": "Rs. 30",
+            "description": "Fried papad topped with a tangy mix of chopped onions, tomatoes, and spices."
+        },
+        {
+            "name": "Plain Raita",
+            "price": "Rs. 49",
+            "description": "A simple and refreshing yogurt dip."
+        },
+        {
+            "name": "Boondi Raita",
+            "price": "Rs. 59",
+            "description": "A popular yogurt dip with small, crispy gram flour balls (boondi)."
+        },
+        {
+            "name": "Plain Dahi",
+            "price": "Rs. 35",
+            "description": "A bowl of fresh, plain curd."
+        },
+        {
+            "name": "Fry Dahi",
+            "price": "Rs. 49",
+            "description": "Yogurt tempered with spices for a savory twist."
+        },
+        {
+            "name": "Sweet Dahi",
+            "price": "Rs. 50",
+            "description": "A bowl of fresh, sweetened curd."
+        },
+        {
+            "name": "Onion Salad",
+            "price": "Rs. 50",
+            "description": "A simple salad of sliced onions with lemon and spices."
+        },
+        {
+            "name": "Kachumber Salad",
+            "price": "Rs. 70",
+            "description": "A refreshing mix of finely chopped cucumber, tomato, and onion."
+        },
+        {
+            "name": "Green Salad",
+            "price": "Rs. 80",
+            "description": "A healthy salad with fresh greens, cucumber, and tomatoes."
+        },
+        {
+            "name": "Fruit Salad",
+            "price": "Rs. 99",
+            "description": "A delightful mix of seasonal fresh fruits."
+        }
+    ],
+    "Thali": [
+        {
+            "name": "Normal Thali",
+            "price": "Rs. 150",
+            "description": "A balanced meal with dal, sabzi, rice, roti, and salad."
+        },
+        {
+            "name": "Special Thali",
+            "price": "Rs. 209",
+            "description": "A complete meal with dal, two sabzis, rice, roti, salad, and a sweet dish."
+        },
+        {
+            "name": "Jain Thali",
+            "price": "Rs. 259",
+            "description": "A special thali prepared without onion, garlic, and root vegetables."
+        }
+    ],
+    "Coffee, Tea & Beverages": [
+        {
+            "name": "Hot Coffee",
+            "price": "Rs. 25",
+            "description": "A classic cup of freshly brewed, comforting hot coffee."
+        },
+        {
+            "name": "Tea",
+            "price": "Rs. 20",
+            "description": "A refreshing cup of Indian milk tea."
+        },
+        {
+            "name": "Lemon Tea",
+            "price": "Rs. 29",
+            "description": "A zesty and refreshing tea with a hint of lemon."
+        },
+        {
+            "name": "Green Tea",
+            "price": "Rs. 39",
+            "description": "A light and healthy brew of green tea."
+        },
+        {
+            "name": "Cold Coffee",
+            "price": "Rs. 119",
+            "description": "A refreshing and creamy chilled coffee shake."
+        },
+        {
+            "name": "Cold Coffee with Ice Cream",
+            "price": "Rs. 139",
+            "description": "A rich cold coffee blended and topped with a scoop of ice cream."
+        },
+        {
+            "name": "Hot Chocolate",
+            "price": "Rs. 39",
+            "description": "A warm and comforting chocolatey beverage."
+        },
+        {
+            "name": "Mineral Water (1 Ltr)",
+            "price": "Rs. 20",
+            "description": "A 1-liter bottle of packaged drinking water."
+        },
+        {
+            "name": "Mineral Water (500ml)",
+            "price": "Rs. 10",
+            "description": "A 500ml bottle of packaged drinking water."
+        }
+    ],
+    "Lassi & Shakes": [
+        {
+            "name": "Sweet Lassi",
+            "price": "Rs. 49",
+            "description": "A traditional, sweet yogurt-based drink."
+        },
+        {
+            "name": "Salted Lassi",
+            "price": "Rs. 39",
+            "description": "A savory and refreshing yogurt drink with spices."
+        },
+        {
+            "name": "Mango Lassi",
+            "price": "Rs. 59",
+            "description": "A sweet and creamy lassi flavored with mango pulp."
+        },
+        {
+            "name": "Banana Lassi",
+            "price": "Rs. 39",
+            "description": "A healthy and delicious lassi blended with fresh bananas."
+        },
+        {
+            "name": "Vanilla Shake",
+            "price": "Rs. 100",
+            "description": "A classic, creamy, and smooth vanilla milkshake."
+        },
+        {
+            "name": "Chocolate Shake",
+            "price": "Rs. 100",
+            "description": "A delightful and rich shake for all chocolate lovers."
+        },
+        {
+            "name": "Mango Shake",
+            "price": "Rs. 109",
+            "description": "A refreshing and sweet milkshake made with ripe mangoes."
+        },
+        {
+            "name": "Strawberry Shake",
+            "price": "Rs. 110",
+            "description": "A sweet and fruity milkshake blended with strawberries."
+        },
+        {
+            "name": "Banana Shake",
+            "price": "Rs. 119",
+            "description": "A thick and wholesome milkshake made with fresh bananas."
+        },
+        {
+            "name": "Kit Kat Shake",
+            "price": "Rs. 119",
+            "description": "A crunchy and chocolatey milkshake blended with Kit Kat bars."
+        },
+        {
+            "name": "Oreo Shake",
+            "price": "Rs. 118",
+            "description": "A thick and creamy milkshake blended with Oreo cookies."
+        }
+    ],
+    "Desserts": [
+        {
+            "name": "Gulab Jamun (2 Pcs)",
+            "price": "Rs. 49",
+            "description": "Soft, spongy milk-solid balls soaked in a sweet syrup."
+        },
+        {
+            "name": "Chhaina Rasgulla",
+            "price": "Rs. 49",
+            "description": "Spongy cottage cheese balls soaked in a light sugar syrup."
+        },
+        {
+            "name": "Ice Cream (Cup)",
+            "price": "Rs. 20",
+            "description": "A single serving cup of delicious ice cream."
+        }
+    ]
+}
