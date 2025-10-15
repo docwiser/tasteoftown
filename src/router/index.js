@@ -62,6 +62,24 @@ const routes = [
     component: () => import('../views/Admin/Dashboard.vue'),
     meta: { requiresAuth: true, requiresAdmin: true }
   },
+    {
+    path: '/admin/settings',
+    name: 'AdminSettings',
+    component: () => import('../views/Admin/Settings.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true }
+  },
+  {
+    path: '/admin/ban-users',
+    name: 'AdminBanUsers',
+    component: () => import('../views/Admin/BanUsers.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true }
+  },
+  {
+    path: '/admin/manage-admins',
+    name: 'AdminManageAdmins',
+    component: () => import('../views/Admin/AdminManagement.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true }
+  },
   {
     path: '/admin/menu',
     name: 'AdminMenu',

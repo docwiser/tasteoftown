@@ -59,10 +59,13 @@ return orders.value.filter(o => o.pendingApproval === true);
 
 <div class="admin-nav">
 <router-link role="button" to="/admin" class="admin-nav-link active">Dashboard</router-link>
+<router-link role="button" to="/admin/settings" class="admin-nav-link">Settings</router-link>
 <router-link role="button" to="/admin/menu" class="admin-nav-link">Customize Menu</router-link>
 <router-link role="button" to="/admin/orders" class="admin-nav-link">View and manage Orders</router-link>
 <router-link role="button" to="/admin/coupons" class="admin-nav-link">Coupons Manager</router-link>
 <router-link role="button" to="/admin/users" class="admin-nav-link">Users</router-link>
+<router-link role="button" to="/admin/ban-users" class="admin-nav-link">Ban Users</router-link>
+<router-link role="button" to="/admin/manage-admins" class="admin-nav-link">Manage Admins</router-link>
 </div>
 <div v-if="loading" class="loading" role="alert">Loading...</div>
 <div v-else>

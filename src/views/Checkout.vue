@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/auth';
 import { useCartStore } from '../stores/cart';
-import { addDocument, getDocuments } from '../firebase/firestore';
+import { addDocument, getDocument, getDocuments } from '../firebase/firestore';
 const router = useRouter();
 const { user, userProfile, updateUserProfile } = useAuthStore();
 const { cartItems, cartTotal, clearCart } = useCartStore();
@@ -23,11 +23,64 @@ const discount = ref(0);
 const paymentMethod = ref('cod');
 const loading = ref(false);
 const error = ref('');
-onMounted(() => {
-if (userProfile.value?.addresses?.length > 0) {
-selectedAddress.value = userProfile.value.addresses[0];
-}
+const orderTimings = ref(null);
+const isRestaurantOpen = ref(true);
+const timeUntilOpen = ref('');
+const isBanned = ref(false);
+
+onMounted(async () => {
+  if (userProfile.value?.isBanned) {
+    isBanned.value = true;
+    return;
+  }
+
+  if (userProfile.value?.addresses?.length > 0) {
+    selectedAddress.value = userProfile.value.addresses[0];
+  }
+  const { data } = await getDocument('settings', 'orderTimings');
+  if (data) {
+    orderTimings.value = data;
+    checkRestaurantStatus();
+    setInterval(checkRestaurantStatus, 60000); // Check every minute
+  }
 });
+
+const checkRestaurantStatus = () => {
+  if (!orderTimings.value) {
+    isRestaurantOpen.value = true;
+    return;
+  }
+
+  const now = new Date();
+  const openTime = new Date();
+  const closeTime = new Date();
+
+  const [openHours, openMinutes] = orderTimings.value.openTime.split(':').map(Number);
+  const [closeHours, closeMinutes] = orderTimings.value.closeTime.split(':').map(Number);
+
+  openTime.setHours(openHours, openMinutes, 0, 0);
+  closeTime.setHours(closeHours, closeMinutes, 0, 0);
+
+  if (now >= openTime && now <= closeTime) {
+    isRestaurantOpen.value = true;
+  } else {
+    isRestaurantOpen.value = false;
+    let timeDiff;
+    if (now < openTime) {
+      timeDiff = openTime - now;
+    } else {
+      // Restaurant is closed for the day, calculate time until next day's opening
+      const tomorrowOpenTime = new Date(openTime);
+      tomorrowOpenTime.setDate(openTime.getDate() + 1);
+      timeDiff = tomorrowOpenTime - now;
+    }
+
+    const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    timeUntilOpen.value = `${hours} Hours ${minutes} Minutes`;
+  }
+};
+
 const deliveryFee = 40;
 const finalTotal = computed(() => {
 return cartTotal.value + deliveryFee - discount.value;
@@ -125,7 +178,11 @@ router.push(`/order/${id}`);
 <div class="checkout-page">
 <div class="checkout-container">
 <h1>Checkout</h1>
-<div class="checkout-content">
+<div v-if="isBanned" class="banned-message">
+  <p>Your account has been banned from placing orders. Please contact us for more information.</p>
+  <a href="https://tasteoftown.in/contact" target="_blank" class="contact-link">Contact Us</a>
+</div>
+<div v-else class="checkout-content">
 <div class="checkout-main">
 <div class="section">
 <h2>Delivery Address</h2>
@@ -253,7 +310,11 @@ Coupon "{{ appliedCoupon.code }}" applied!
 </div>
 </div>
 <div v-if="error" class="error-message" role="alert">{{ error }}</div>
-<button @click="placeOrder" class="btn-place-order" :disabled="loading">
+            <div v-if="orderTimings && !isRestaurantOpen" class="timing-info">
+              <p>You can place orders from {{ orderTimings.openTime }} to {{ orderTimings.closeTime }}.</p>
+              <p>Orders will be collected after {{ timeUntilOpen }}.</p>
+            </div>
+<button @click="placeOrder" class="btn-place-order" :disabled="loading || !isRestaurantOpen">
 {{ loading ? 'Placing Order...' : 'Place Order' }}
 </button>
 </div>
@@ -522,6 +583,29 @@ padding: 0.875rem;
 border-radius: 8px;
 margin-bottom: 1rem;
 font-size: 0.9rem;
+}
+
+.timing-info {
+  background: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.banned-message {
+  background: #fee;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-link {
+  color: #c33;
+  text-decoration: underline;
 }
 
 .btn-primary,
