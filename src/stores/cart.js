@@ -33,6 +33,27 @@ export const useCartStore = () => {
     }
   };
 
+  const increaseQuantity = (itemId) => {
+    const item = cartItems.value.find(i => i.id === itemId);
+    if (item) {
+      item.quantity++;
+      saveCart();
+    }
+  };
+
+  const decreaseQuantity = (itemId) => {
+    const item = cartItems.value.find(i => i.id === itemId);
+    if (item) {
+      if (item.quantity > 1) {
+        item.quantity--;
+      } else {
+        removeFromCart(itemId);
+      }
+      saveCart();
+    }
+  };
+
+
   const clearCart = () => {
     cartItems.value = [];
     saveCart();
@@ -71,6 +92,8 @@ export const useCartStore = () => {
     addToCart,
     removeFromCart,
     updateQuantity,
+    increaseQuantity,
+    decreaseQuantity,
     clearCart,
     replaceCart,
     loadCart

@@ -12,7 +12,7 @@ router.push('/menu');
 <h1>Welcome to Taste of Town</h1>
 <p class="hero-subtitle">Delicious Food Delivered to Your Doorstep</p>
 <p class="hero-description">
-Experience authentic flavors from Damo, Madhya Pradesh. Fresh ingredients, traditional recipes, and fast delivery.
+Experience authentic flavors from Damoh, Madhya Pradesh. Fresh ingredients, traditional recipes, and fast delivery.
 </p>
 <button @click="goToMenu" class="btn-hero">
 Browse Menu
@@ -29,7 +29,7 @@ Browse Menu
 <div class="feature">
 <div class="feature-icon">🚀</div>
 <h3>Fast Delivery</h3>
-<p>Quick delivery to your location in Damo and surrounding areas</p>
+<p>Quick delivery to your location in Damoh and surrounding areas</p>
 </div>
 <div class="feature">
 <div class="feature-icon">💰</div>
@@ -74,6 +74,17 @@ Order Now
 </div>
 </section>
 </div>
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="https://tasteoftown.in/about" target="_blank" class="footer-link">About Us</a>
+        <a href="https://tasteoftown.in/privacy-policy" target="_blank" class="footer-link">Privacy Policy</a>
+        <a href="https://tasteoftown.in/terms" target="_blank" class="footer-link">Terms and Conditions</a>
+      </div>
+      <div class="footer-social">
+        </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -278,5 +289,34 @@ grid-template-columns: repeat(2, 1fr);
 .cta h2 {
 font-size: 1.75rem;
 }
+}
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #667eea;
 }
 </style>
