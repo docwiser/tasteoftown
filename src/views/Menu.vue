@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 import { useCartStore } from '../stores/cart';
 import { getDocuments } from '../firebase/firestore';
@@ -7,6 +7,8 @@ import { getDocuments } from '../firebase/firestore';
 const router = useRouter();
 const { 
   cartItems,
+  cartCount,
+  cartTotal,
   addToCart, 
   increaseQuantity,
   decreaseQuantity
@@ -18,6 +20,7 @@ const loading = ref(true);
 const searchQuery = ref('');
 const filterType = ref('all');
 const sortBy = ref('name');
+const plusButtonRefs = ref({});
 
 onMounted(async () => {
   await loadMenu();
@@ -88,8 +91,16 @@ const getItemQuantity = (itemId) => {
   return item ? item.quantity : 0;
 };
 
-const handleAddToCart = (item) => {
+const handleAddToCart = async (item) => {
+  const isFirstItem = getItemQuantity(item.id) === 0;
   addToCart(item);
+  if (isFirstItem) {
+    await nextTick();
+    const button = plusButtonRefs.value[item.id];
+    if (button) {
+      button.focus();
+    }
+  }
 };
 
 const viewItemDetail = (itemId) => {
@@ -139,7 +150,7 @@ const goToCart = () => {
       <div v-if="loading" class="loading">Loading menu...</div>
 
       <div v-else class="categories-container">
-        <details v-for="(items, category) in filteredItemsByCategory" :key="category" open>
+        <details v-for="(items, category) in filteredItemsByCategory" :key="category">
           <summary>{{ category }}</summary>
           <div v-if="items.length === 0" class="no-items">
             <p>No items found in this category</p>
@@ -167,9 +178,9 @@ const goToCart = () => {
                     </button>
                   </div>
                   <div v-else class="quantity-control">
-                    <button @click="decreaseQuantity(item.id)" class="btn-quantity">-</button>
+                    <button @click="decreaseQuantity(item.id)" class="btn-quantity" :aria-label="`Decrease quantity of ${item.name}`">-</button>
                     <span>{{ getItemQuantity(item.id) }}</span>
-                    <button @click="increaseQuantity(item.id)" class="btn-quantity">+</button>
+                    <button :ref="el => { if (el) plusButtonRefs[item.id] = el }" @click="increaseQuantity(item.id)" class="btn-quantity" :aria-label="`Increase quantity of ${item.name}`">+</button>
                   </div>
                 </div>
               </div>
