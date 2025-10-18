@@ -34,6 +34,7 @@ const newOrders = ref([...props.orders]);
 const remainingTime = ref(300); // 5 minutes in seconds
 let timer = null;
 const audio = new Audio('https://tasteoftown.in/file/tone.mp3');
+audio.loop = true;
 
 const startTimer = () => {
   if (timer) clearInterval(timer);
