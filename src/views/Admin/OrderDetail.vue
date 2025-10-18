@@ -17,10 +17,37 @@
           <p>{{ order.address.city }}, {{ order.address.state }} - {{ order.address.pincode }}</p>
         </div>
         <div class="detail-section">
-          <h3>Order Items</h3>
-          <div v-for="(item, index) in order.items" :key="index" class="item-row">
-            <span>{{ item.name }} x {{ item.quantity }}</span>
-            <span>₹{{ (item.price * item.quantity).toFixed(2) }}</span>
+          <div class="section-header-inline">
+            <h3>Order Items</h3>
+            <button
+              v-if="!modifyingCart && order.status === 'placed'"
+              @click="startModifyingCart"
+              class="btn-modify"
+            >
+              Modify Cart
+            </button>
+          </div>
+          <div v-if="!modifyingCart" class="items-list">
+            <div v-for="(item, index) in order.items" :key="index" class="item-row">
+              <span>{{ item.name }} x {{ item.quantity }}</span>
+              <span>₹{{ (item.price * item.quantity).toFixed(2) }}</span>
+            </div>
+          </div>
+          <div v-else class="items-list-editable">
+            <div v-for="(item, index) in modifiedItems" :key="index" class="item-row-editable">
+              <span class="item-name">{{ item.name }}</span>
+              <div class="quantity-controls">
+                <button @click="updateModifiedQuantity(index, item.quantity - 1)">-</button>
+                <span>{{ item.quantity }}</span>
+                <button @click="updateModifiedQuantity(index, item.quantity + 1)">+</button>
+              </div>
+              <span class="item-price">₹{{ (item.price * item.quantity).toFixed(2) }}</span>
+              <button @click="removeModifiedItem(index)" class="btn-remove-item">×</button>
+            </div>
+            <div class="modify-actions">
+              <button @click="saveModifiedCart" class="btn-save-modify">Save & Send for Approval</button>
+              <button @click="cancelModifyCart" class="btn-cancel-modify">Cancel</button>
+            </div>
           </div>
         </div>
         <div class="detail-section">
@@ -83,12 +110,17 @@ const order = ref(null);
 const loading = ref(true);
 const newTimelineName = ref('');
 const newTimelineNote = ref('');
+const modifyingCart = ref(false);
+const modifiedItems = ref([]);
 
 let unsubscribe = null;
 
 onMounted(() => {
   unsubscribe = subscribeToDocument('orders', orderId, (data) => {
     order.value = data;
+    if (data) {
+      modifiedItems.value = JSON.parse(JSON.stringify(data.items));
+    }
     loading.value = false;
   });
 });
@@ -134,6 +166,52 @@ const addTimelineEntry = async () => {
   newTimelineName.value = '';
   newTimelineNote.value = '';
 };
+
+const startModifyingCart = () => {
+  modifyingCart.value = true;
+};
+
+const updateModifiedQuantity = (index, quantity) => {
+  if (quantity <= 0) {
+    modifiedItems.value.splice(index, 1);
+  } else {
+    modifiedItems.value[index].quantity = quantity;
+  }
+};
+
+const removeModifiedItem = (index) => {
+  modifiedItems.value.splice(index, 1);
+};
+
+const saveModifiedCart = async () => {
+  if (modifiedItems.value.length === 0) {
+    alert('Cart cannot be empty');
+    return;
+  }
+
+  const newSubtotal = modifiedItems.value.reduce((sum, item) => {
+    return sum + (item.price * item.quantity);
+  }, 0);
+
+  const newTotal = newSubtotal + order.value.deliveryFee - order.value.discount;
+
+  await updateDocument('orders', order.value.id, {
+    items: modifiedItems.value,
+    subtotal: newSubtotal,
+    total: newTotal,
+    modifiedByAdmin: true,
+    pendingApproval: true,
+    status: 'reviewing'
+  });
+
+  modifyingCart.value = false;
+};
+
+const cancelModifyCart = () => {
+  modifiedItems.value = JSON.parse(JSON.stringify(order.value.items));
+  modifyingCart.value = false;
+};
+
 </script>
 
 <style scoped>
@@ -191,5 +269,102 @@ const addTimelineEntry = async () => {
 
 input {
   padding: 0.5rem;
+}
+
+.section-header-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.btn-modify {
+  padding: 0.5rem 1rem;
+  background: #f59e0b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.items-list-editable {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-row-editable {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+}
+
+.item-name {
+  color: #333;
+  font-weight: 500;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-controls button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #667eea;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.btn-remove-item {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.modify-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-save-modify,
+.btn-cancel-modify {
+  flex: 1;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save-modify {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-cancel-modify {
+  background: #f5f5f5;
+  color: #333;
 }
 </style>

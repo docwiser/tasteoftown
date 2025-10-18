@@ -17,11 +17,21 @@ import { db } from './config';
 
 export const addDocument = async (collectionName, data) => {
   try {
-    const docRef = await addDoc(collection(db, collectionName), {
-      ...data,
-      createdAt: serverTimestamp()
-    });
-    return { id: docRef.id, error: null };
+    if (collectionName === 'orders') {
+      const numericId = Date.now().toString();
+      const docRef = doc(db, collectionName, numericId);
+      await setDoc(docRef, {
+        ...data,
+        createdAt: serverTimestamp()
+      });
+      return { id: numericId, error: null };
+    } else {
+      const docRef = await addDoc(collection(db, collectionName), {
+        ...data,
+        createdAt: serverTimestamp()
+      });
+      return { id: docRef.id, error: null };
+    }
   } catch (error) {
     return { id: null, error: error.message };
   }
