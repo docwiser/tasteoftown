@@ -38,8 +38,8 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
-import { subscribeToCollection } from '../../firebase/firestore';
-import { useAuth } from '../../composables/useAuth';
+import { subscribeToCollection } from '../firebase/firestore';
+import { useAuthStore } from '../stores/auth';
 
 const props = defineProps({
   show: Boolean,
@@ -50,7 +50,7 @@ const emit = defineEmits(['close', 'apply-coupon']);
 
 const coupons = ref([]);
 const loading = ref(true);
-const { user } = useAuth();
+const { user } = useAuthStore();
 let unsubscribeCoupons = null;
 
 onMounted(() => {
