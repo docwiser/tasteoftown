@@ -62,6 +62,7 @@
             </div>
           </div>
           <div class="timeline-add">
+            <input v-model="newTimelineName" placeholder="Timeline entry name" />
             <input v-model="newTimelineNote" placeholder="Add a note to the timeline" />
             <button @click="addTimelineEntry">Add to Timeline</button>
           </div>
@@ -80,6 +81,7 @@ const route = useRoute();
 const orderId = route.params.orderid;
 const order = ref(null);
 const loading = ref(true);
+const newTimelineName = ref('');
 const newTimelineNote = ref('');
 
 let unsubscribe = null;
@@ -115,10 +117,10 @@ const updateStatus = async (newStatus) => {
 };
 
 const addTimelineEntry = async () => {
-  if (!order.value || !newTimelineNote.value) return;
+  if (!order.value || !newTimelineNote.value || !newTimelineName.value) return;
 
   const newEntry = {
-    status: order.value.status,
+    status: newTimelineName.value,
     timestamp: new Date().toISOString(),
     note: newTimelineNote.value,
   };
@@ -129,6 +131,7 @@ const addTimelineEntry = async () => {
     statusHistory: updatedHistory,
   });
 
+  newTimelineName.value = '';
   newTimelineNote.value = '';
 };
 </script>
@@ -182,11 +185,11 @@ const addTimelineEntry = async () => {
 .timeline-add {
   margin-top: 1rem;
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
 input {
-  flex-grow: 1;
   padding: 0.5rem;
 }
 </style>
